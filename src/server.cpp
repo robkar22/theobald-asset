@@ -1,4 +1,5 @@
 #include "server.hpp"
+#include "database.hpp"
 #include "http.hpp"
 #include "router.hpp"
 
@@ -12,7 +13,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-Server::Server(std::uint16_t port) : port_(port) {}
+Server::Server(std::uint16_t port,Database& db) : port_(port), db_(db) {}
 int Server::run() {
   int server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -89,7 +90,7 @@ int Server::run() {
     }
     HttpResponse response;
     if (request.has_value()) {
-      response = handle_request(*request);
+      response = handle_request(*request,db_);
     } else {
       response.body = "Bad Request";
       response.status = 400;

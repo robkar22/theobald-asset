@@ -44,12 +44,17 @@ std::optional<HttpRequest> parse_http_request(const std::string &raw_request) {
   if (second_space == std::string::npos) {
     return std::nullopt;
   }
+  size_t header_separator = raw_request.find("\r\n\r\n");
+  if(header_separator == std::string::npos){
+    return std::nullopt;
+  }
   http_request.method = request_line.substr(0, first_space);
 
   http_request.path =
       request_line.substr(first_space + 1, second_space - first_space - 1);
 
   http_request.version = request_line.substr(second_space + 1);
+  http_request.body = raw_request.substr(header_separator + 4);
 
   if (http_request.version.empty() || http_request.method.empty() ||
       http_request.path.empty()) {

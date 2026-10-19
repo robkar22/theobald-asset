@@ -7,6 +7,7 @@ struct HttpRequest {
     std::string method;
     std::string path;
     std::string version;
+    std::string body;
 };
 
 struct HttpResponse {
