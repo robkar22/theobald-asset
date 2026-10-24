@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24T10:55:39.496016749+02:00",
+  "data": {
+    "/home/kejtii/Projects/theoblad-asset/CMakeLists.txt": [
+      {
+        "label": "CMAKE_CXX_STANDARD",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /home/kejtii/Projects/theoblad-asset/CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_CXX_STANDARD_REQUIRED",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /home/kejtii/Projects/theoblad-asset/CMakeLists.txt"
+      },
+      {
+        "label": "CMAKE_EXPORT_COMPILE_COMMANDS",
+        "kind": 12,
+        "detail": "Value",
+        "documentation": "defined variable\nfrom: /home/kejtii/Projects/theoblad-asset/CMakeLists.txt"
+      },
+      {
+        "label": "SQLite3_LIBRARIES",
+        "kind": 6,
+        "detail": "Variable",
+        "documentation": "package: SQLite3"
+      },
+      {
+        "label": "SQLite3_INCLUDE_DIRS",
+        "kind": 6,
+        "detail": "Variable",
+        "documentation": "package: SQLite3"
+      }
+    ]
+  }
+}
